@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark"> 
+<html lang="es" class="dark">
 
 <head>
    <meta charset="UTF-8" />
@@ -7,37 +7,49 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
    <title>El Rincón del Sabor - Comida Rápida Premium</title>
    <meta name="description" content="El Rincón del Sabor - Disfruta de la mejor comida rápida premium" />
-   
+
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   
+
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
 </head>
 
-<body class="leading-normal tracking-normal font-['Open_Sans'] bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
-   
+<body
+   class="leading-normal tracking-normal font-['Open_Sans'] bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
+
    <!-- NAVEGACIÓN -->
-   <nav id="header" class="fixed w-full z-30 top-0 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+   <nav id="header"
+      class="fixed w-full z-30 top-0 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4 px-4">
          <div class="flex items-center">
-            <a class="text-yellow-500 dark:text-yellow-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex items-center gap-2 font-['Bebas_Neue'] tracking-wider" href="#">
+            <a class="text-yellow-500 dark:text-yellow-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex items-center gap-2 font-['Bebas_Neue'] tracking-wider"
+               href="#">
                <span>🍔</span> Rincón del Sabor
             </a>
          </div>
-         
+
          <div class="w-full lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 z-20 hidden" id="nav-content">
-            <ul class="list-reset flex flex-row justify-center lg:justify-end flex-1 items-center gap-4 lg:gap-8 font-semibold text-sm">
-               <li><a class="inline-block py-2 px-2 text-yellow-500 dark:text-yellow-400 no-underline transition" href="#inicio">Inicio</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#menu">Especialidades</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#carta-completa">Carta</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#promociones">Promos</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#contacto">Contacto</a></li>
+            <ul
+               class="list-reset flex flex-row justify-center lg:justify-end flex-1 items-center gap-4 lg:gap-8 font-semibold text-sm">
+               <li><a class="inline-block py-2 px-2 text-yellow-500 dark:text-yellow-400 no-underline transition"
+                     href="#inicio">Inicio</a></li>
+               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
+                     href="#menu">Especialidades</a></li>
+               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
+                     href="#carta-completa">Carta</a></li>
+               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
+                     href="#promociones">Promos</a></li>
+               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
+                     href="#contacto">Contacto</a></li>
             </ul>
          </div>
 
          <div class="flex items-center gap-4">
-            <button class="hidden lg:block hover:underline bg-yellow-500 dark:bg-yellow-400 text-white dark:text-gray-900 font-bold rounded-full py-2 px-6 shadow transform transition hover:scale-105 duration-300 ease-in-out">
+            <button
+               class="hidden lg:block hover:underline bg-yellow-500 dark:bg-yellow-400 text-white dark:text-gray-900 font-bold rounded-full py-2 px-6 shadow transform transition hover:scale-105 duration-300 ease-in-out">
                Ordenar Ahora
             </button>
          </div>
@@ -46,69 +58,102 @@
 
    <!-- HERO / INICIO -->
    <!-- Reemplazo del gradiente CSS por utilidades de gradiente de Tailwind -->
-   <div id="inicio" class="pt-32 pb-16 md:pt-40 bg-gradient-to-br from-gray-200 via-white to-gray-200 dark:from-black dark:via-[#1a1a1a] dark:to-black transition-colors duration-300">
+   <div id="inicio"
+      class="pt-32 pb-16 md:pt-40 bg-gradient-to-br from-gray-200 via-white to-gray-200 dark:from-black dark:via-[#1a1a1a] dark:to-black transition-colors duration-300">
       <div class="container px-4 mx-auto flex flex-col md:flex-row items-center gap-8">
          <div class="flex flex-col w-full md:w-1/2 justify-center items-start text-center md:text-left md:ml-4">
-            <p class="uppercase tracking-widest w-full font-bold text-sm text-yellow-600 dark:text-[#FFC800]">★ Especial del día ★</p>
-            <h1 class="my-4 text-5xl md:text-7xl font-bold leading-tight text-yellow-500 dark:text-[#FFC800] font-['Bebas_Neue'] tracking-wide">
+            <p class="uppercase tracking-widest w-full font-bold text-sm text-yellow-600 dark:text-[#FFC800]">★ Especial
+               del día ★</p>
+            <h1
+               class="my-4 text-5xl md:text-7xl font-bold leading-tight text-yellow-500 dark:text-[#FFC800] font-['Bebas_Neue'] tracking-wide">
                Las Mejores Hamburguesas Premium
             </h1>
             <p class="leading-normal text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300">
-               Disfruta de nuestras deliciosas hamburguesas hechas con carne 100% artesanal, ingredientes frescos y salsas secretas de la casa.
+               Disfruta de nuestras deliciosas hamburguesas hechas con carne 100% artesanal, ingredientes frescos y
+               salsas secretas de la casa.
             </p>
-            <button class="mx-auto lg:mx-0 font-bold rounded-full my-2 py-4 px-8 shadow-lg transform transition hover:scale-105 duration-300 ease-in-out text-lg bg-yellow-500 text-white hover:bg-yellow-600 dark:bg-[#FFC800] dark:text-black dark:hover:bg-yellow-500">
+            <button
+               class="mx-auto lg:mx-0 font-bold rounded-full my-2 py-4 px-8 shadow-lg transform transition hover:scale-105 duration-300 ease-in-out text-lg bg-yellow-500 text-white hover:bg-yellow-600 dark:bg-[#FFC800] dark:text-black dark:hover:bg-yellow-500">
                Comprar Ahora
             </button>
          </div>
          <div class="w-full md:w-1/2 text-center">
-            <img class="w-full max-w-lg mx-auto object-contain drop-shadow-[0_20px_50px_rgba(250,204,21,0.4)] dark:drop-shadow-[0_20px_50px_rgba(255,200,0,0.3)]" src="hero.png" alt="Hamburguesa especial" />
+            <img
+               class="w-full max-w-lg mx-auto object-contain drop-shadow-[0_20px_50px_rgba(250,204,21,0.4)] dark:drop-shadow-[0_20px_50px_rgba(255,200,0,0.3)]"
+               src="Imágenes/hero.png" alt="Hamburguesa especial" />
          </div>
       </div>
    </div>
 
    <!-- SECCIÓN ESPECIALIDADES -->
-   <section id="menu" class="bg-white dark:bg-zinc-900 py-16 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
+   <section id="menu"
+      class="bg-white dark:bg-zinc-900 py-16 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
       <div class="container max-w-6xl mx-auto px-4">
-         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">Nuestras Especialidades</h2>
-         <div class="w-full mb-12"><div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div></div>
-         
+         <h2
+            class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">
+            Nuestras Especialidades</h2>
+         <div class="w-full mb-12">
+            <div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div>
+         </div>
+
          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Card 1 -->
-            <div class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
+            <div
+               class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
                <div>
-                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img class="w-full h-48 object-contain" src="hamburguesa-clasica.webp" alt="Hamburguesa Clásica" /></div>
-                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">Hamburguesa Clásica</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Carne premium de 150g, queso cheddar fundido, lechuga fresca, tomate y nuestra salsa especial.</p>
+                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img
+                        class="w-full h-48 object-contain" src="Imágenes/hamburguesa-clasica.webp"
+                        alt="Hamburguesa Clásica" /></div>
+                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">
+                     Hamburguesa Clásica</h3>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Carne premium de 150g, queso cheddar fundido,
+                     lechuga fresca, tomate y nuestra salsa especial.</p>
                </div>
                <div class="flex items-center justify-between mt-4">
-                  <span class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$8.50</span>
-                  <button class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
+                  <span
+                     class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$8.50</span>
+                  <button
+                     class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
                </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
+            <div
+               class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
                <div>
-                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img class="w-full h-48 object-contain" src="baconbbq-burger.webp" alt="Bacon BBQ Burger" /></div>
-                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">Bacon BBQ Burger</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Doble porción de tocino crujiente, aros de cebolla, doble queso cheddar y una espectacular salsa BBQ artesanal.</p>
+                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img
+                        class="w-full h-48 object-contain" src="Imágenes/baconbbq-burger.webp" alt="Bacon BBQ Burger" />
+                  </div>
+                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">
+                     Bacon BBQ Burger</h3>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Doble porción de tocino crujiente, aros de
+                     cebolla, doble queso cheddar y una espectacular salsa BBQ artesanal.</p>
                </div>
                <div class="flex items-center justify-between mt-4">
-                  <span class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$10.00</span>
-                  <button class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
+                  <span
+                     class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$10.00</span>
+                  <button
+                     class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
                </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
+            <div
+               class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
                <div>
-                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img class="w-full h-45 object-cover scale-99" src="triplecheese.webp" alt="Triple Cheese Smash" /></div>
-                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">Triple Cheese Smash</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Tres carnes smash ultra delgadas con costra crujiente, intercaladas con capas infinitas de queso cheddar americano.</p>
+                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img
+                        class="w-full h-45 object-cover scale-99" src="Imágenes/triplecheese.webp"
+                        alt="Triple Cheese Smash" /></div>
+                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">
+                     Triple Cheese Smash</h3>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Tres carnes smash ultra delgadas con costra
+                     crujiente, intercaladas con capas infinitas de queso cheddar americano.</p>
                </div>
                <div class="flex items-center justify-between mt-4">
-                  <span class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$12.00</span>
-                  <button class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
+                  <span
+                     class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$12.00</span>
+                  <button
+                     class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
                </div>
             </div>
          </div>
@@ -116,54 +161,175 @@
    </section>
 
    <!-- SECCIÓN CARTA COMPLETA -->
-   <section id="carta-completa" class="bg-gray-50 dark:bg-black py-16 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
+   <section id="carta-completa"
+      class="bg-gray-50 dark:bg-black py-16 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
       <div class="container max-w-5xl mx-auto px-4">
-         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">Nuestra Carta</h2>
-         <div class="w-full mb-16"><div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div></div>
+         <h2
+            class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">
+            Nuestra Carta</h2>
+         <div class="w-full mb-16">
+            <div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div>
+         </div>
 
          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Columna Izquierda: Hamburguesas -->
             <div>
-               <h3 class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">Hamburguesas</h3>
-               <div class="mb-6 group"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">La Clásica</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$8.50</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, queso cheddar, tomate, lechuga y salsa de la casa.</p></div>
-               <div class="mb-6 group"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">Bacon BBQ</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$10.00</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, doble tocino, aros de cebolla, cheddar y salsa BBQ.</p></div>
-               <div class="mb-6 group"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">Triple Smash</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$12.00</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Tres carnes smash de 90g, triple queso americano, pepinillos y mostaza dulce.</p></div>
+               <h3
+                  class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">
+                  Hamburguesas</h3>
+               <div class="mb-6 group">
+                  <div class="flex justify-between items-end mb-1">
+                     <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">La
+                        Clásica</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$8.50</span>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, queso cheddar, tomate, lechuga
+                     y salsa de la casa.</p>
+               </div>
+               <div class="mb-6 group">
+                  <div class="flex justify-between items-end mb-1">
+                     <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
+                        Bacon BBQ</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$10.00</span>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, doble tocino, aros de cebolla,
+                     cheddar y salsa BBQ.</p>
+               </div>
+               <div class="mb-6 group">
+                  <div class="flex justify-between items-end mb-1">
+                     <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
+                        Triple Smash</h4><span
+                        class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$12.00</span>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Tres carnes smash de 90g, triple queso americano,
+                     pepinillos y mostaza dulce.</p>
+               </div>
             </div>
 
             <!-- Columna Derecha: Acompañantes y Bebidas -->
             <div>
                <!-- Acompañantes -->
                <div class="mb-10">
-                  <h3 class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">Acompañantes</h3>
-                  <div class="mb-4"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">Papas Fritas Clásicas</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$3.00</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Porción grande de papas rústicas con sal marina.</p></div>
-                  <div class="mb-4"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">Papas Cheddar & Bacon</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$5.50</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Papas fritas bañadas en salsa de queso cheddar fundido y lluvia de tocino.</p></div>
+                  <h3
+                     class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">
+                     Acompañantes</h3>
+                  <div class="mb-4">
+                     <div class="flex justify-between items-end mb-1">
+                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
+                           Papas Fritas Clásicas</h4><span
+                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$3.00</span>
+                     </div>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Porción grande de papas rústicas con sal
+                        marina.</p>
+                  </div>
+                  <div class="mb-4">
+                     <div class="flex justify-between items-end mb-1">
+                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
+                           Papas Cheddar & Bacon</h4><span
+                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$5.50</span>
+                     </div>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Papas fritas bañadas en salsa de queso cheddar
+                        fundido y lluvia de tocino.</p>
+                  </div>
                </div>
 
                <!-- Bebidas -->
                <div>
-                  <h3 class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">Bebidas</h3>
-                  <div class="mb-4"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">Colas / Refrescos</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$2.00</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Coca-Cola, Sprite, Fanta (500ml).</p></div>
-                  <div class="mb-4"><div class="flex justify-between items-end mb-1"><h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">Milkshakes</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$4.50</span></div><p class="text-gray-600 dark:text-gray-400 text-sm">Batido espeso de Vainilla, Fresa o Chocolate coronado con crema batida.</p></div>
+                  <h3
+                     class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">
+                     Bebidas</h3>
+                  <div class="mb-4">
+                     <div class="flex justify-between items-end mb-1">
+                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
+                           Colas / Refrescos</h4><span
+                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$2.00</span>
+                     </div>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Coca-Cola, Sprite, Fanta (500ml).</p>
+                  </div>
+                  <div class="mb-4">
+                     <div class="flex justify-between items-end mb-1">
+                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
+                           Milkshakes</h4><span
+                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$4.50</span>
+                     </div>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Batido espeso de Vainilla, Fresa o Chocolate
+                        coronado con crema batida.</p>
+                  </div>
                </div>
             </div>
          </div>
       </div>
    </section>
 
+   <section id="promociones"
+      class="py-16 bg-white dark:bg-zinc-900 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
+      <div class="container max-w-4xl mx-auto px-4">
+         <h2
+            class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">
+            Combos & Promociones
+         </h2>
+         <div class="w-full mb-12">
+            <div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div>
+         </div>
+
+         <div
+            class="bg-gradient-to-br from-amber-500 to-red-600 dark:from-amber-600 dark:to-red-800 rounded-3xl flex flex-col items-center shadow-2xl overflow-hidden border border-red-200 dark:border-red-500/30 transition-colors duration-300">
+
+            <div class="w-full bg-white/10 dark:bg-black/20 p-8 flex justify-center items-center">
+               <img src="Imágenes/combo-duo.webp" alt="Combo Duo Especial"
+                  class="max-w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] transform hover:scale-105 transition duration-500"
+                  style="max-height: 350px;" />
+            </div>
+
+            <div class="w-full p-8 md:p-12 text-center flex flex-col items-center">
+               <span
+                  class="bg-white text-red-600 dark:bg-black dark:text-yellow-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block shadow-md">Oferta
+                  Limitada</span>
+
+               <h3
+                  class="text-4xl md:text-5xl text-white font-bold mb-4 drop-shadow-md dark:drop-shadow-lg font-['Bebas_Neue'] tracking-wide">
+                  Combo Duo Especial</h3>
+
+               <p
+                  class="text-white/90 dark:text-white/95 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-medium drop-shadow-sm">
+                  Llévate 2 Hamburguesas Clásicas + 2 Porciones de Papas Grandes + 2 Bebidas frías por un precio
+                  irresistible.
+               </p>
+
+               <div
+                  class="bg-white/20 dark:bg-black/30 backdrop-blur-md px-8 py-6 rounded-2xl border border-white/30 dark:border-white/10 w-full max-w-sm shadow-inner">
+                  <p class="text-white/90 dark:text-white/80 text-sm uppercase tracking-wider mb-1">Antes <span
+                        class="line-through text-white/60 dark:text-white/50">$22.00</span></p>
+                  <p
+                     class="text-6xl font-black text-yellow-300 dark:text-yellow-400 my-2 drop-shadow-md font-['Bebas_Neue'] tracking-wider">
+                     $13.99</p>
+                  <button
+                     class="mt-4 bg-white text-red-600 dark:text-red-700 font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-yellow-400 hover:text-black dark:hover:bg-yellow-400 dark:hover:text-black transition-all hover:scale-105 transform duration-300 w-full">
+                     Pedir Combo
+                  </button>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
    <!-- FOOTER -->
-   <footer id="contacto" class="bg-gray-200 dark:bg-black py-12 border-t border-gray-300 dark:border-zinc-800 text-gray-700 dark:text-gray-400 text-sm transition-colors duration-300">
+   <footer id="contacto"
+      class="bg-gray-200 dark:bg-black py-12 border-t border-gray-300 dark:border-zinc-800 text-gray-700 dark:text-gray-400 text-sm transition-colors duration-300">
       <div class="container max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
          <div>
-            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">El Rincón del Sabor</h4>
+            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">El Rincón
+               del Sabor</h4>
             <p>Sabor premium, ingredientes seleccionados y la mejor atención directo a tu mesa o domicilio.</p>
          </div>
          <div>
-            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">Horarios</h4>
+            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">Horarios
+            </h4>
             <p>Lunes a Jueves: 12:00 PM - 10:00 PM</p>
             <p>Viernes a Domingo: 12:00 PM - 12:00 AM</p>
          </div>
          <div>
-            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">Contacto</h4>
+            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">Contacto
+            </h4>
             <p>📍 Av. Principal Sabor #123</p>
             <p>📞 +593 99 999 9999</p>
          </div>
@@ -173,4 +339,5 @@
       </div>
    </footer>
 </body>
+
 </html>
