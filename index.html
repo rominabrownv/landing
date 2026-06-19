@@ -1,393 +1,305 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
-
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
    <title>El Rincón del Sabor - Comida Rápida Premium</title>
    <meta name="description" content="El Rincón del Sabor - Disfruta de la mejor comida rápida premium" />
-
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-
-<body
-   class="leading-normal tracking-normal font-['Open_Sans'] bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
-
-   <!-- NAVEGACIÓN -->
-   <nav id="header"
-      class="fixed w-full z-30 top-0 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4 px-4">
-         <div class="flex items-center">
-            <a class="text-yellow-500 dark:text-yellow-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex items-center gap-2 font-['Bebas_Neue'] tracking-wider"
-               href="#">
-               <span>🍔</span> Rincón del Sabor
-            </a>
-         </div>
-
-         <div class="w-full lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 z-20 hidden" id="nav-content">
-            <ul
-               class="list-reset flex flex-row justify-center lg:justify-end flex-1 items-center gap-4 lg:gap-8 font-semibold text-sm">
-               <li><a class="inline-block py-2 px-2 text-yellow-500 dark:text-yellow-400 no-underline transition"
-                     href="#inicio">Inicio</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
-                     href="#menu">Especialidades</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
-                     href="#carta-completa">Carta</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
-                     href="#promociones">Promos</a></li>
-               <li><a class="inline-block text-gray-600 dark:text-white no-underline hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition"
-                     href="#contacto">Contacto</a></li>
+ 
+<body class="leading-normal tracking-normal font-['Open_Sans'] bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
+ 
+   <!-- NAV -->
+   <nav class="fixed w-full z-30 top-0 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between py-4 px-4">
+         <a class="text-yellow-500 dark:text-yellow-400 font-bold text-2xl lg:text-4xl flex items-center gap-2 font-['Bebas_Neue'] tracking-wider" href="#">
+            🍔 Rincón del Sabor
+         </a>
+         <div class="hidden lg:flex items-center">
+            <ul class="flex flex-row items-center gap-6 font-semibold text-sm">
+               <li><a class="text-yellow-500 dark:text-yellow-400 py-2 px-2 hover:underline" href="#inicio">Inicio</a></li>
+               <li><a class="text-gray-600 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#menu">Especialidades</a></li>
+               <li><a class="text-gray-600 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#carta-completa">Carta</a></li>
+               <li><a class="text-gray-600 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#promociones">Promos</a></li>
+               <li><a class="text-gray-600 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#mas-vendidos">Más Vendidos</a></li>
+               <li><a class="text-gray-600 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#vota">Vota</a></li>
+               <li><a class="text-gray-600 dark:text-white hover:text-yellow-500 dark:hover:text-yellow-400 py-2 px-2 transition" href="#contacto">Contacto</a></li>
             </ul>
          </div>
-
-         <div class="flex items-center gap-4">
-            <button
-               class="hidden lg:block hover:underline bg-yellow-500 dark:bg-yellow-400 text-white dark:text-gray-900 font-bold rounded-full py-2 px-6 shadow transform transition hover:scale-105 duration-300 ease-in-out">
-               Ordenar Ahora
-            </button>
-         </div>
+         <button class="hidden lg:block bg-yellow-500 dark:bg-yellow-400 text-white dark:text-gray-900 font-bold rounded-full py-2 px-6 shadow hover:scale-105 transition duration-300">
+            Ordenar Ahora
+         </button>
       </div>
    </nav>
-
-   <!-- HERO / INICIO -->
-   <!-- Reemplazo del gradiente CSS por utilidades de gradiente de Tailwind -->
-   <div id="inicio"
-      class="pt-32 pb-16 md:pt-40 bg-gradient-to-br from-gray-200 via-white to-gray-200 dark:from-black dark:via-[#1a1a1a] dark:to-black transition-colors duration-300">
+ 
+   <!-- HERO -->
+   <div id="inicio" class="pt-32 pb-16 md:pt-40 bg-gradient-to-br from-gray-200 via-white to-gray-200 dark:from-black dark:via-[#1a1a1a] dark:to-black transition-colors duration-300">
       <div class="container px-4 mx-auto flex flex-col md:flex-row items-center gap-8">
          <div class="flex flex-col w-full md:w-1/2 justify-center items-start text-center md:text-left md:ml-4">
-            <p class="uppercase tracking-widest w-full font-bold text-sm text-yellow-600 dark:text-[#FFC800]">★ Especial
-               del día ★</p>
-            <h1
-               class="my-4 text-5xl md:text-7xl font-bold leading-tight text-yellow-500 dark:text-[#FFC800] font-['Bebas_Neue'] tracking-wide">
+            <p class="uppercase tracking-widest font-bold text-sm text-yellow-600 dark:text-[#FFC800] mb-2">★ Especial del día ★</p>
+            <h1 class="my-4 text-5xl md:text-7xl font-bold leading-tight text-yellow-500 dark:text-[#FFC800] font-['Bebas_Neue'] tracking-wide">
                Las Mejores Hamburguesas Premium
             </h1>
             <p class="leading-normal text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300">
-               Disfruta de nuestras deliciosas hamburguesas hechas con carne 100% artesanal, ingredientes frescos y
-               salsas secretas de la casa.
+               Disfruta de nuestras deliciosas hamburguesas hechas con carne 100% artesanal, ingredientes frescos y salsas secretas de la casa.
             </p>
-            <button
-               class="mx-auto lg:mx-0 font-bold rounded-full my-2 py-4 px-8 shadow-lg transform transition hover:scale-105 duration-300 ease-in-out text-lg bg-yellow-500 text-white hover:bg-yellow-600 dark:bg-[#FFC800] dark:text-black dark:hover:bg-yellow-500">
+            <button class="mx-auto lg:mx-0 font-bold rounded-full py-4 px-8 shadow-lg hover:scale-105 transition duration-300 text-lg bg-yellow-500 text-white hover:bg-yellow-600 dark:bg-[#FFC800] dark:text-black">
                Comprar Ahora
             </button>
          </div>
          <div class="w-full md:w-1/2 text-center">
-            <img
-               class="w-full max-w-lg mx-auto object-contain drop-shadow-[0_20px_50px_rgba(250,204,21,0.4)] dark:drop-shadow-[0_20px_50px_rgba(255,200,0,0.3)]"
+            <img class="w-full max-w-lg mx-auto object-contain drop-shadow-[0_20px_50px_rgba(250,204,21,0.4)]"
                src="Imágenes/hero.png" alt="Hamburguesa especial" />
          </div>
       </div>
    </div>
-
-   <!-- SECCIÓN ESPECIALIDADES -->
-   <section id="menu"
-      class="bg-white dark:bg-zinc-900 py-16 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
+ 
+   <!-- ESPECIALIDADES -->
+   <section id="menu" class="bg-white dark:bg-zinc-900 py-16 border-t border-gray-200 dark:border-zinc-800">
       <div class="container max-w-6xl mx-auto px-4">
-         <h2
-            class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">
-            Nuestras Especialidades</h2>
-         <div class="w-full mb-12">
-            <div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div>
-         </div>
-
+         <h2 class="text-5xl font-bold text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400 mb-2">Nuestras Especialidades</h2>
+         <div class="h-1 w-32 mx-auto mb-12 rounded bg-yellow-500"></div>
          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Card 1 -->
-            <div
-               class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
+            <div class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 transition duration-300 flex flex-col justify-between shadow-sm">
                <div>
-                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img
-                        class="w-full h-48 object-contain" src="Imágenes/hamburguesa-clasica.webp"
-                        alt="Hamburguesa Clásica" /></div>
-                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">
-                     Hamburguesa Clásica</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Carne premium de 150g, queso cheddar fundido,
-                     lechuga fresca, tomate y nuestra salsa especial.</p>
-               </div>
-               <div class="flex items-center justify-between mt-4">
-                  <span
-                     class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$8.50</span>
-                  <button
-                     class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
-               </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div
-               class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
-               <div>
-                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img
-                        class="w-full h-48 object-contain" src="Imágenes/baconbbq-burger.webp" alt="Bacon BBQ Burger" />
+                  <div class="h-48 rounded-xl mb-4 overflow-hidden bg-gray-200 dark:bg-zinc-800">
+                     <img class="w-full h-48 object-contain" src="Imágenes/hamburguesa-clasica.webp" alt="Hamburguesa Clásica" />
                   </div>
-                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">
-                     Bacon BBQ Burger</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Doble porción de tocino crujiente, aros de
-                     cebolla, doble queso cheddar y una espectacular salsa BBQ artesanal.</p>
+                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] dark:text-white">Hamburguesa Clásica</h3>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne premium de 150g, queso cheddar fundido, lechuga fresca, tomate y nuestra salsa especial.</p>
                </div>
                <div class="flex items-center justify-between mt-4">
-                  <span
-                     class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$10.00</span>
-                  <button
-                     class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
+                  <span class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">$8.50</span>
+                  <button class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg text-sm hover:bg-yellow-600 transition">Agregar</button>
                </div>
             </div>
-
-            <!-- Card 3 -->
-            <div
-               class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 dark:hover:border-yellow-400 transition duration-300 flex flex-col justify-between shadow-sm dark:shadow-none">
+            <!-- Card 2 -->
+            <div class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 transition duration-300 flex flex-col justify-between shadow-sm">
                <div>
-                  <div class="bg-gray-200 dark:bg-zinc-800 h-48 rounded-xl mb-4 overflow-hidden"><img
-                        class="w-full h-45 object-cover scale-99" src="Imágenes/triplecheese.webp"
-                        alt="Triple Cheese Smash" /></div>
-                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-white">
-                     Triple Cheese Smash</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Tres carnes smash ultra delgadas con costra
-                     crujiente, intercaladas con capas infinitas de queso cheddar americano.</p>
+                  <div class="h-48 rounded-xl mb-4 overflow-hidden bg-gray-200 dark:bg-zinc-800">
+                     <img class="w-full h-48 object-contain" src="Imágenes/baconbbq-burger.webp" alt="Bacon BBQ Burger" />
+                  </div>
+                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] dark:text-white">Bacon BBQ Burger</h3>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Doble porción de tocino crujiente, aros de cebolla, doble queso cheddar y salsa BBQ artesanal.</p>
                </div>
                <div class="flex items-center justify-between mt-4">
-                  <span
-                     class="text-2xl font-bold text-gray-900 dark:text-white font-['Bebas_Neue'] tracking-wider">$12.00</span>
-                  <button
-                     class="px-4 py-2 bg-yellow-500 dark:bg-yellow-400 text-white dark:text-black font-bold rounded-lg text-sm hover:bg-yellow-600 dark:hover:bg-yellow-300 transition">Agregar</button>
+                  <span class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">$10.00</span>
+                  <button class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg text-sm hover:bg-yellow-600 transition">Agregar</button>
+               </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-gray-50 dark:bg-black/40 p-6 rounded-2xl border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 transition duration-300 flex flex-col justify-between shadow-sm">
+               <div>
+                  <div class="h-48 rounded-xl mb-4 overflow-hidden bg-gray-200 dark:bg-zinc-800">
+                     <img class="w-full h-48 object-cover" src="Imágenes/triplecheese.webp" alt="Triple Cheese Smash" />
+                  </div>
+                  <h3 class="text-3xl font-bold mb-2 font-['Bebas_Neue'] dark:text-white">Triple Cheese Smash</h3>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Tres carnes smash ultra delgadas con costra crujiente, intercaladas con queso cheddar americano.</p>
+               </div>
+               <div class="flex items-center justify-between mt-4">
+                  <span class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">$12.00</span>
+                  <button class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg text-sm hover:bg-yellow-600 transition">Agregar</button>
                </div>
             </div>
          </div>
       </div>
    </section>
-
-   <!-- SECCIÓN CARTA COMPLETA -->
-   <section id="carta-completa"
-      class="bg-gray-50 dark:bg-black py-16 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
+ 
+   <!-- CARTA COMPLETA -->
+   <section id="carta-completa" class="bg-gray-50 dark:bg-black py-16 border-t border-gray-200 dark:border-zinc-800">
       <div class="container max-w-5xl mx-auto px-4">
-         <h2
-            class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">
-            Nuestra Carta</h2>
-         <div class="w-full mb-16">
-            <div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div>
-         </div>
-
+         <h2 class="text-5xl font-bold text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400 mb-2">Nuestra Carta</h2>
+         <div class="h-1 w-32 mx-auto mb-16 rounded bg-yellow-500"></div>
          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <!-- Columna Izquierda: Hamburguesas -->
             <div>
-               <h3
-                  class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">
-                  Hamburguesas</h3>
-               <div class="mb-6 group">
+               <h3 class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] text-gray-800 dark:text-yellow-500">Hamburguesas</h3>
+               <div class="mb-6">
                   <div class="flex justify-between items-end mb-1">
-                     <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">La
-                        Clásica</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$8.50</span>
+                     <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">La Clásica</h4>
+                     <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$8.50</span>
                   </div>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, queso cheddar, tomate, lechuga
-                     y salsa de la casa.</p>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, queso cheddar, tomate, lechuga y salsa de la casa.</p>
                </div>
-               <div class="mb-6 group">
+               <div class="mb-6">
                   <div class="flex justify-between items-end mb-1">
-                     <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
-                        Bacon BBQ</h4><span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$10.00</span>
+                     <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">Bacon BBQ</h4>
+                     <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$10.00</span>
                   </div>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, doble tocino, aros de cebolla,
-                     cheddar y salsa BBQ.</p>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Carne de res 150g, doble tocino, aros de cebolla, cheddar y salsa BBQ.</p>
                </div>
-               <div class="mb-6 group">
+               <div class="mb-6">
                   <div class="flex justify-between items-end mb-1">
-                     <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
-                        Triple Smash</h4><span
-                        class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$12.00</span>
+                     <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">Triple Smash</h4>
+                     <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$12.00</span>
                   </div>
-                  <p class="text-gray-600 dark:text-gray-400 text-sm">Tres carnes smash de 90g, triple queso americano,
-                     pepinillos y mostaza dulce.</p>
+                  <p class="text-gray-600 dark:text-gray-400 text-sm">Tres carnes smash de 90g, triple queso americano, pepinillos y mostaza dulce.</p>
                </div>
             </div>
-
-            <!-- Columna Derecha: Acompañantes y Bebidas -->
             <div>
-               <!-- Acompañantes -->
                <div class="mb-10">
-                  <h3
-                     class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">
-                     Acompañantes</h3>
+                  <h3 class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] text-gray-800 dark:text-yellow-500">Acompañantes</h3>
                   <div class="mb-4">
                      <div class="flex justify-between items-end mb-1">
-                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
-                           Papas Fritas Clásicas</h4><span
-                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$3.00</span>
+                        <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">Papas Fritas Clásicas</h4>
+                        <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$3.00</span>
                      </div>
-                     <p class="text-gray-600 dark:text-gray-400 text-sm">Porción grande de papas rústicas con sal
-                        marina.</p>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Porción grande de papas rústicas con sal marina.</p>
                   </div>
                   <div class="mb-4">
                      <div class="flex justify-between items-end mb-1">
-                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
-                           Papas Cheddar & Bacon</h4><span
-                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$5.50</span>
+                        <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">Papas Cheddar & Bacon</h4>
+                        <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$5.50</span>
                      </div>
-                     <p class="text-gray-600 dark:text-gray-400 text-sm">Papas fritas bañadas en salsa de queso cheddar
-                        fundido y lluvia de tocino.</p>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Papas fritas bañadas en salsa cheddar fundido y lluvia de tocino.</p>
                   </div>
                </div>
-
-               <!-- Bebidas -->
                <div>
-                  <h3
-                     class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] tracking-wide text-gray-800 dark:text-yellow-500">
-                     Bebidas</h3>
+                  <h3 class="text-4xl border-b border-gray-300 dark:border-zinc-800 pb-2 mb-6 font-['Bebas_Neue'] text-gray-800 dark:text-yellow-500">Bebidas</h3>
                   <div class="mb-4">
                      <div class="flex justify-between items-end mb-1">
-                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
-                           Colas / Refrescos</h4><span
-                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$2.00</span>
+                        <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">Colas / Refrescos</h4>
+                        <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$2.00</span>
                      </div>
                      <p class="text-gray-600 dark:text-gray-400 text-sm">Coca-Cola, Sprite, Fanta (500ml).</p>
                   </div>
                   <div class="mb-4">
                      <div class="flex justify-between items-end mb-1">
-                        <h4 class="text-2xl text-gray-900 dark:text-white font-bold tracking-wide font-['Bebas_Neue']">
-                           Milkshakes</h4><span
-                           class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$4.50</span>
+                        <h4 class="text-2xl font-bold font-['Bebas_Neue'] dark:text-white">Milkshakes</h4>
+                        <span class="text-xl text-yellow-600 dark:text-yellow-400 font-bold">$4.50</span>
                      </div>
-                     <p class="text-gray-600 dark:text-gray-400 text-sm">Batido espeso de Vainilla, Fresa o Chocolate
-                        coronado con crema batida.</p>
+                     <p class="text-gray-600 dark:text-gray-400 text-sm">Batido espeso de Vainilla, Fresa o Chocolate con crema batida.</p>
                   </div>
                </div>
             </div>
          </div>
       </div>
    </section>
-
-   <section id="promociones"
-      class="py-16 bg-white dark:bg-zinc-900 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300">
+ 
+   <!-- PROMOCIONES -->
+   <section id="promociones" class="py-16 bg-white dark:bg-zinc-900 border-t border-gray-200 dark:border-zinc-800">
       <div class="container max-w-4xl mx-auto px-4">
-         <h2
-            class="w-full my-2 text-5xl font-bold leading-tight text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400">
-            Combos & Promociones
-         </h2>
-         <div class="w-full mb-12">
-            <div class="h-1 mx-auto w-32 my-0 py-0 rounded-t bg-yellow-500 dark:bg-[#FFC800]"></div>
-         </div>
-
-         <div
-            class="bg-gradient-to-br from-amber-500 to-red-600 dark:from-amber-600 dark:to-red-800 rounded-3xl flex flex-col items-center shadow-2xl overflow-hidden border border-red-200 dark:border-red-500/30 transition-colors duration-300">
-
-            <div class="w-full bg-white/10 dark:bg-black/20 p-8 flex justify-center items-center">
-               <img src="Imágenes/combo-duo.webp" alt="Combo Duo Especial"
-                  class="max-w-full h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] transform hover:scale-105 transition duration-500"
-                  style="max-height: 350px;" />
+         <h2 class="text-5xl font-bold text-center font-['Bebas_Neue'] tracking-wide text-gray-900 dark:text-yellow-400 mb-2">Combos & Promociones</h2>
+         <div class="h-1 w-32 mx-auto mb-12 rounded bg-yellow-500"></div>
+         <div class="bg-gradient-to-br from-amber-500 to-red-600 dark:from-amber-600 dark:to-red-800 rounded-3xl flex flex-col items-center shadow-2xl overflow-hidden">
+            <div class="w-full bg-white/10 p-8 flex justify-center">
+               <img src="Imágenes/combo-duo.webp" alt="Combo Duo" class="max-w-full h-auto object-contain hover:scale-105 transition duration-500" style="max-height:350px;" />
             </div>
-
             <div class="w-full p-8 md:p-12 text-center flex flex-col items-center">
-               <span
-                  class="bg-white text-red-600 dark:bg-black dark:text-yellow-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block shadow-md">Oferta
-                  Limitada</span>
-
-               <h3
-                  class="text-4xl md:text-5xl text-white font-bold mb-4 drop-shadow-md dark:drop-shadow-lg font-['Bebas_Neue'] tracking-wide">
-                  Combo Duo Especial</h3>
-
-               <p
-                  class="text-white/90 dark:text-white/95 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-medium drop-shadow-sm">
-                  Llévate 2 Hamburguesas Clásicas + 2 Porciones de Papas Grandes + 2 Bebidas frías por un precio
-                  irresistible.
-               </p>
-
-               <div
-                  class="bg-white/20 dark:bg-black/30 backdrop-blur-md px-8 py-6 rounded-2xl border border-white/30 dark:border-white/10 w-full max-w-sm shadow-inner">
-                  <p class="text-white/90 dark:text-white/80 text-sm uppercase tracking-wider mb-1">Antes <span
-                        class="line-through text-white/60 dark:text-white/50">$22.00</span></p>
-                  <p
-                     class="text-6xl font-black text-yellow-300 dark:text-yellow-400 my-2 drop-shadow-md font-['Bebas_Neue'] tracking-wider">
-                     $13.99</p>
+               <span class="bg-white text-red-600 dark:bg-black dark:text-yellow-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block">Oferta Limitada</span>
+               <h3 class="text-4xl md:text-5xl text-white font-bold mb-4 font-['Bebas_Neue']">Combo Duo Especial</h3>
+               <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">2 Hamburguesas Clásicas + 2 Papas Grandes + 2 Bebidas por un precio irresistible.</p>
+               <div class="bg-white/20 backdrop-blur-md px-8 py-6 rounded-2xl border border-white/30 w-full max-w-sm">
+                  <p class="text-white/80 text-sm uppercase tracking-wider mb-1">Antes <span class="line-through text-white/50">$22.00</span></p>
+                  <p class="text-6xl font-black text-yellow-300 my-2 font-['Bebas_Neue']">$13.99</p>
                   <button id="Promociones_b"
-                     class="mt-4 bg-white text-red-600 dark:text-red-700 font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-yellow-400 hover:text-black dark:hover:bg-yellow-400 dark:hover:text-black transition-all hover:scale-105 transform duration-300 w-full">
+                     class="mt-4 bg-white text-red-600 font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-yellow-400 hover:text-black transition-all hover:scale-105 transform duration-300 w-full">
                      Pedir Combo
                   </button>
                </div>
             </div>
-
          </div>
       </div>
    </section>
-
-   <section class="bg-slate-50 dark:bg-gray-900">
-
-   <div id="container-05" class="px-4 pt-8 mx-auto max-w-md md:max-w-xl">
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-1">
-         <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">Productos más
-            vendidos</h2>
+ 
+   <!-- MÁS VENDIDOS (GET JSON + GET XML) -->
+   <section id="mas-vendidos" class="bg-slate-50 dark:bg-gray-900 py-16 border-t border-gray-200 dark:border-zinc-800">
+      <div class="container max-w-5xl mx-auto px-4">
+         <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mb-2">🍔 Productos más vendidos</h2>
+         <div class="h-1 w-32 mx-auto mb-10 rounded bg-yellow-500"></div>
+ 
+         <!-- Filtro por categoría desde XML -->
+         <div class="max-w-sm mx-auto mb-8">
+            <label for="categories" class="block text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">Filtrar por categoría</label>
+            <select id="categories"
+               class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 p-2.5">
+               <option value="">Todas las categorías</option>
+            </select>
+         </div>
+ 
+         <!-- Grid de productos -->
+         <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
+            <!-- Skeleton loading -->
+            <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
+               <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
+               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
+               <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
+               <div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
+            </div>
+            <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
+               <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
+               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
+               <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
+               <div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
+            </div>
+            <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
+               <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
+               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
+               <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
+               <div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
+            </div>
+         </div>
       </div>
-   </div>
-
-   <div id="container-06" class="max-w-4xl pt-8 mx-auto">
-      <form class="max-w-sm mx-auto">
-         <select id="categories"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option selected>Seleccione una categoría</option>
-            <option value="1">Category01</option>
-            <option value="2">Category02</option>
-            <option value="3">Category03</option>
-         </select>
-      </form>
-   </div>
-
-   <div id="container-07" class="max-w-4xl pt-5 pb-5 mx-auto">
-      <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 gap-3 p-6">
-
-         <!-- Products Card -->
-         <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
-            <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
-            <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-            <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-            <div class="space-y-2">
-               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
-            </div>
-         </div>
-
-         <!-- Products Card -->
-         <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
-            <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
-            <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-            <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-            <div class="space-y-2">
-               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
-            </div>
-         </div>
-
-         <!-- Products Card -->
-         <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
-            <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
-            <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-            <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-            <div class="space-y-2">
-               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
-            </div>
-         </div>
-
-      </div>
-   </div>
    </section>
-
-   <!-- FOOTER -->
-   <footer id="contacto"
-      class="bg-gray-200 dark:bg-black py-12 border-t border-gray-300 dark:border-zinc-800 text-gray-700 dark:text-gray-400 text-sm transition-colors duration-300">
+ 
+   <!-- VOTACIÓN (POST a Firebase) -->
+   <section id="vota" class="bg-white dark:bg-black py-16 border-t border-gray-200 dark:border-zinc-800">
+      <div class="container max-w-md mx-auto px-4">
+         <h2 class="text-4xl font-extrabold text-center text-gray-900 dark:text-white font-['Bebas_Neue'] mb-2">🗳️ Vota por tu favorito</h2>
+         <p class="text-center text-gray-500 dark:text-gray-400 text-sm mb-8">Dinos cuál es tu plato preferido del Rincón del Sabor</p>
+ 
+         <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-md border border-gray-200 dark:border-zinc-800">
+            <form id="form_voting" class="space-y-4">
+ 
+               <!-- input texto (nombre) -->
+               <div>
+                  <label for="voter_name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Tu nombre</label>
+                  <input id="voter_name" type="text" placeholder="Ej: Carlos Pérez" required
+                     class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 p-2.5 placeholder-gray-400" />
+               </div>
+ 
+               <!-- select de productos (se llena dinámicamente desde el JSON) -->
+               <div>
+                  <label for="select_product" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Tu plato favorito</label>
+                  <select id="select_product" required
+                     class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 p-2.5">
+                     <option value="" disabled selected>¿Cuál es tu favorito? 🍔</option>
+                  </select>
+               </div>
+ 
+               <!-- button submit -->
+               <button type="submit"
+                  class="w-full bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black text-white font-bold py-3 px-6 rounded-lg transition hover:scale-[1.02] shadow-md">
+                  VOTAR 🗳️
+               </button>
+            </form>
+ 
+            <!-- Resultado interactivo del voto -->
+            <div id="results" class="mt-6 border border-gray-200 dark:border-zinc-700 rounded-xl min-h-[80px] flex items-center justify-center bg-white dark:bg-gray-800 p-4">
+               <p class="text-gray-400 dark:text-gray-500 text-sm text-center">El resultado de tu voto aparecerá aquí 🍔</p>
+            </div>
+         </div>
+      </div>
+   </section>
+ 
+   <!-- FOOTER / CONTACTO -->
+   <footer id="contacto" class="bg-gray-200 dark:bg-black py-12 border-t border-gray-300 dark:border-zinc-800 text-gray-700 dark:text-gray-400 text-sm">
       <div class="container max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
          <div>
-            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">El Rincón
-               del Sabor</h4>
+            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue']">El Rincón del Sabor</h4>
             <p>Sabor premium, ingredientes seleccionados y la mejor atención directo a tu mesa o domicilio.</p>
          </div>
          <div>
-            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">Horarios
-            </h4>
+            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue']">Horarios</h4>
             <p>Lunes a Jueves: 12:00 PM - 10:00 PM</p>
             <p>Viernes a Domingo: 12:00 PM - 12:00 AM</p>
          </div>
          <div>
-            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue'] tracking-wide">Contacto
-            </h4>
+            <h4 class="text-2xl text-yellow-600 dark:text-yellow-400 mb-4 font-['Bebas_Neue']">Contacto</h4>
             <p>📍 Av. Principal Sabor #123</p>
             <p>📞 +593 99 999 9999</p>
          </div>
@@ -396,44 +308,39 @@
          &copy; 2026 El Rincón del Sabor. Todos los derechos reservados.
       </div>
    </footer>
-
+ 
+   <!--
+      TOAST DE SUSCRIPCIÓN
+      FIX: empieza con "hidden". JS le agrega "fixed right-5 bottom-5 z-50"
+      y quita "hidden" 2.5 segundos después de cargar la página.
+      Los <a> tienen data-accion="si" / data-accion="no" para el listener.
+   -->
    <div id="toast-interactive"
-      class="hidden right-5 bottom-5 flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:divide-gray-700 dark:bg-gray-800"
+      class="hidden flex items-start gap-3 w-full max-w-xs p-4 text-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-2xl shadow-2xl border border-yellow-400 dark:border-yellow-500"
       role="alert">
-      <div class="flex">
-
-         <!-- Content -->
-         <div class="ms-3 text-sm font-normal">
-            <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Suscríbete ahora</span>
-            <div class="mb-2">Suscríbete ahora para obtener beneficios de cliente premium y pro.</div>
-            <div class="grid grid-cols-2 gap-2">
-               <div>
-                  <a href="#"
-                     class="inline-flex justify-center w-full px-2 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">Sí,
-                     quiero</a>
-               </div>
-               <div>
-                  <a href="#"
-                     class="inline-flex justify-center w-full px-2 py-1.5 text-xs font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">No
-                     ahora</a>
-               </div>
-            </div>
+      <span class="text-3xl mt-0.5">🍔</span>
+      <div class="flex-1 text-sm">
+         <p class="font-bold text-gray-900 dark:text-white mb-1">¡Ofertas para clientes VIP!</p>
+         <p class="text-gray-500 dark:text-gray-400 mb-3">Suscríbete y recibe descuentos exclusivos del Rincón del Sabor.</p>
+         <div class="flex gap-2">
+            <a href="#" data-accion="si"
+               class="flex-1 text-center text-xs font-bold px-3 py-1.5 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg transition">
+               ¡Me apunto! 🎉
+            </a>
+            <a href="#" data-accion="no"
+               class="flex-1 text-center text-xs font-bold px-3 py-1.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 text-gray-700 dark:text-white rounded-lg transition border border-gray-300 dark:border-gray-600">
+               Ahora no
+            </a>
          </div>
-
-         <!-- Close button -->
-         <button type="button"
-            class="ms-auto -mx-1.5 -my-1.5 p-1.5 inline-flex items-center justify-center w-8 h-8 text-gray-400 bg-white rounded-lg hover:text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-            data-dismiss-target="#toast-interactive" aria-label="Close">
-            <span class="sr-only">Close</span>
-            <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" aria-hidden="true">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-            </svg>
-         </button>
       </div>
+      <button type="button" data-dismiss-target="#toast-interactive" aria-label="Cerrar"
+         class="text-gray-400 hover:text-gray-900 dark:hover:text-white p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition self-start">
+         <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+         </svg>
+      </button>
    </div>
-
-   <script type= "module" src="./src/js/file01.js"></script>
+ 
+   <script type="module" src="./src/js/file01.js"></script>
 </body>
-
 </html>
