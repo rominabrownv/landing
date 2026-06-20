@@ -45,7 +45,7 @@ const renderCategories = async () => {
 };
 
 let renderProducts = (idCategoria = "") => {
-    fetchProducts('https://gist.githubusercontent.com/Christian777-Ing/d7c3ff807b067a73e2f0fd5dba99820d/raw/7fee14248496f2964d8a10c05d7182e747463d63/menu.json')
+    fetchProducts('https://gist.githubusercontent.com/Christian777-Ing/d7c3ff807b067a73e2f0fd5dba99820d/raw/5dfe463d49f9086f9dccdbf70797ee7a64418c75/menu.json')
         .then(result => {
             if (result.success) {
                 let container = document.getElementById("products-container");
