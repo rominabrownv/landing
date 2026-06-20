@@ -131,6 +131,15 @@ const showVideo = () => {
             window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
         });
     }
+
+    // Agregar funcionalidad a todos los botones con clase btn-video
+    const videoButtons = document.querySelectorAll(".btn-video");
+    videoButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+        });
+    });
 };
 
 const enableForm = () => {
@@ -217,6 +226,18 @@ const showVoteMessage = (message, isSuccess) => {
             });
         });
     }
+
+    // Funcionalidad para botones que van al menú
+    const menuButtons = document.querySelectorAll(".btn-menu");
+    menuButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            const menuSection = document.getElementById("menu");
+            if (menuSection) {
+                menuSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
 
     // Funcionalidad para cerrar el pop-up y suscribirse
     const toast = document.getElementById("toast-interactive");
