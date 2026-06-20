@@ -135,6 +135,7 @@ const showVideo = () => {
 
 const enableForm = () => {
     const form = document.getElementById("form_voting");
+    if (!form) return;
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -142,9 +143,25 @@ const enableForm = () => {
         const selectProduct = document.getElementById("select_product");
         const productID = selectProduct.value;
 
-        saveVote(productID)
+        // Capturamos el valor del INPUT del nombre
+        const inputName = document.getElementById("voter_name");
+        const voterName = inputName ? inputName.value.trim() : "Anónimo";
+
+        if (!productID) {
+            alert("Por favor, selecciona un producto antes de votar.");
+            return;
+        }
+
+        if (voterName === "") {
+            alert("Por favor, ingresa tu nombre para votar.");
+            return;
+        }
+        saveVote(productID, voterName)
             .then((result) => {
                 alert(result.message);
+                if (result.success) {
+                    form.reset(); 
+                }
             });
     });
 };

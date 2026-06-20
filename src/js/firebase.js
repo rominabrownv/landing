@@ -14,14 +14,15 @@ const firebaseConfig = {
 const app      = initializeApp(firebaseConfig);
 const database = getDatabase(app);
  
-const saveVote = (productID) => {
+const saveVote = (productID, voterName) => {
     const newVoteRef = push(ref(database, "votes"));
     return set(newVoteRef, {
         productID,
+        votoPor: voterName,
         fecha: new Date().toISOString(),
     })
-    .then(() => ({ status: true,  message: "Voto guardado correctamente" }))
-    .catch(err => ({ status: false, message: err.message }));
+    .then(() => ({ success: true, message: "¡Voto guardado correctamente!" }))
+    .catch(err => ({ success: false, message: err.message }));
 };
  
 export { saveVote };
