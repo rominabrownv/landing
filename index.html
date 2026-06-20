@@ -223,7 +223,8 @@
       </div>
    </section>
  
-   <section id="mas-vendidos" class="bg-slate-50 dark:bg-gray-900 py-16 border-t border-gray-200 dark:border-zinc-800">
+   <!-- SECCIÓN CORREGIDA: Ajustados los recuadros del selector y los Skeletons para eliminar tonos azulados -->
+   <section id="mas-vendidos" class="bg-white dark:bg-zinc-900 py-16 border-t border-gray-200 dark:border-zinc-800">
       <div class="container max-w-5xl mx-auto px-4">
          <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mb-2">🍔 Productos más vendidos</h2>
          <div class="h-1 w-32 mx-auto mb-10 rounded bg-yellow-500"></div>
@@ -231,29 +232,32 @@
          <div class="max-w-sm mx-auto mb-8">
             <label for="categories" class="block text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">Filtrar por categoría</label>
             <select id="categories"
-               class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 p-2.5">
+               class="w-full bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-800 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-yellow-400 focus:border-yellow-400 p-2.5">
                <option value="">Todas las categorías</option>
             </select>
          </div>
  
          <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
-            <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
-               <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
-               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-               <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-               <div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
+            <!-- Recuadro 1 -->
+            <div class="animate-pulse space-y-4 bg-white dark:bg-zinc-900/40 p-4 rounded-2xl shadow border border-transparent dark:border-zinc-800">
+               <div class="w-full h-40 bg-gray-200 dark:bg-zinc-800 rounded-lg"></div>
+               <div class="h-6 bg-gray-200 dark:bg-zinc-800 rounded w-3/4"></div>
+               <div class="h-5 bg-gray-200 dark:bg-zinc-800 rounded w-1/2"></div>
+               <div class="h-8 bg-gray-200 dark:bg-zinc-800 rounded w-full"></div>
             </div>
-            <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
-               <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
-               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-               <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-               <div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
+            <!-- Recuadro 2 -->
+            <div class="animate-pulse space-y-4 bg-white dark:bg-zinc-900/40 p-4 rounded-2xl shadow border border-transparent dark:border-zinc-800">
+               <div class="w-full h-40 bg-gray-200 dark:bg-zinc-800 rounded-lg"></div>
+               <div class="h-6 bg-gray-200 dark:bg-zinc-800 rounded w-3/4"></div>
+               <div class="h-5 bg-gray-200 dark:bg-zinc-800 rounded w-1/2"></div>
+               <div class="h-8 bg-gray-200 dark:bg-zinc-800 rounded w-full"></div>
             </div>
-            <div class="animate-pulse space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
-               <div class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
-               <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-               <div class="h-5 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-               <div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
+            <!-- Recuadro 3 -->
+            <div class="animate-pulse space-y-4 bg-white dark:bg-zinc-900/40 p-4 rounded-2xl shadow border border-transparent dark:border-zinc-800">
+               <div class="w-full h-40 bg-gray-200 dark:bg-zinc-800 rounded-lg"></div>
+               <div class="h-6 bg-gray-200 dark:bg-zinc-800 rounded w-3/4"></div>
+               <div class="h-5 bg-gray-200 dark:bg-zinc-800 rounded w-1/2"></div>
+               <div class="h-8 bg-gray-200 dark:bg-zinc-800 rounded w-full"></div>
             </div>
          </div>
       </div>

@@ -89,9 +89,9 @@ let renderProducts = (idCategoria = "") => {
                 // 3. Renderizar Tarjetas
                 productsToDisplay.forEach(product => {
                     let productHTML = `
-   <div class="space-y-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow">
+   <div class="space-y-4 bg-gray-50 dark:bg-black/40 p-4 rounded-2xl shadow border border-gray-200 dark:border-zinc-800 hover:border-yellow-500 transition duration-300">
        <img
-           class="w-full h-40 bg-gray-300 dark:bg-gray-700 rounded-lg object-cover transition-transform duration-300 hover:scale-[1.03]"
+           class="w-full h-40 bg-gray-200 dark:bg-zinc-800 rounded-lg object-cover transition-transform duration-300 hover:scale-[1.03]"
            src="[PRODUCT.IMGURL]" alt="[PRODUCT.TITLE]">
        <h3
            class="h-6 text-xl font-semibold tracking-tight text-gray-900 dark:text-white hover:text-black-600 dark:hover:text-white-400">
@@ -101,7 +101,7 @@ let renderProducts = (idCategoria = "") => {
        <div class="h-5 rounded w-full">[PRODUCT.TITLE]</div>
            <div class="space-y-2">
                <a href="[PRODUCT.PRODUCTURL]" target="_blank" rel="noopener noreferrer"
-               class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full inline-block">
+               class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-gray-900 dark:focus:ring-yellow-200 w-full inline-block">
                    Ordenar Ahora
                </a>
                <div class="hidden"><span class="1">[PRODUCT.CATEGORY_ID]</span></div>
