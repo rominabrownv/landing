@@ -62,4 +62,42 @@ let fetchProducts =  (url) => {
         });
 }
 
-export { fetchCategories, fetchProducts }
+// POST genérico para suscribirse al newsletter
+let subscribeNewsletter = async (email) => {
+    try {
+        const response = await fetch(
+            "https://landing-6e41f-default-rtdb.firebaseio.com/newsletter-subscribers.json",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    fecha_suscripcion: new Date().toISOString(),
+                    estado: "activo"
+                })
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("No se pudo suscribir al newsletter.");
+        }
+
+        const data = await response.json();
+
+        return {
+            success: true,
+            message: "¡Gracias por suscribirte! Recibirás nuestras ofertas especiales.",
+            id: data.name
+        };
+
+    } catch (error) {
+        return {
+            success: false,
+            message: error.message
+        };
+    }
+}
+
+export { fetchCategories, fetchProducts, subscribeNewsletter }

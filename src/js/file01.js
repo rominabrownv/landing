@@ -1,6 +1,7 @@
 "use strict";
 import { fetchProducts } from "./functions.js";
 import { fetchCategories } from "./functions.js";
+import { subscribeNewsletter } from "./functions.js";
 import { saveVote } from "./firebase.js";
 
 const renderCategories = async () => {
@@ -147,22 +148,55 @@ const enableForm = () => {
         const voterName = inputName ? inputName.value.trim() : "Anónimo";
 
         if (!productID) {
-            alert("Por favor, selecciona un producto antes de votar.");
+            showVoteMessage("Por favor, selecciona un producto antes de votar.", false);
             return;
         }
 
         if (voterName === "") {
-            alert("Por favor, ingresa tu nombre para votar.");
+            showVoteMessage("Por favor, ingresa tu nombre para votar.", false);
             return;
         }
+
         saveVote(productID, voterName)
             .then((result) => {
-                alert(result.message);
                 if (result.success) {
+                    // Obtener el nombre del producto seleccionado
+                    const productName = selectProduct.options[selectProduct.selectedIndex].text;
+                    
+                    // Mostrar mensaje personalizado
+                    const successMessage = `¡Gracias ${voterName}! Tu voto por ${productName} 🍔 ha sido registrado con éxito en la base de datos.`;
+                    showVoteMessage(successMessage, true);
+                    
                     form.reset(); 
+                } else {
+                    showVoteMessage(result.message || "Hubo un error al registrar tu voto.", false);
                 }
+            })
+            .catch((error) => {
+                showVoteMessage("Error al registrar el voto. Intenta nuevamente.", false);
             });
     });
+};
+
+const showVoteMessage = (message, isSuccess) => {
+    const resultsDiv = document.getElementById("results");
+    if (!resultsDiv) return;
+
+    // Limpiar contenido anterior
+    resultsDiv.innerHTML = '';
+
+    // Crear el elemento del mensaje
+    const messageElement = document.createElement("p");
+    messageElement.textContent = message;
+    
+    // Agregar estilos según si es éxito o error
+    if (isSuccess) {
+        messageElement.className = "text-gray-900 dark:text-white text-center font-semibold text-lg animate-pulse";
+    } else {
+        messageElement.className = "text-red-600 dark:text-red-400 text-center font-semibold text-lg";
+    }
+
+    resultsDiv.appendChild(messageElement);
 };
 
 (() => {
@@ -184,7 +218,7 @@ const enableForm = () => {
         });
     }
 
-    // Funcionalidad para cerrar el pop-up
+    // Funcionalidad para cerrar el pop-up y suscribirse
     const toast = document.getElementById("toast-interactive");
     if (toast) {
         // Cerrar con la X
@@ -200,7 +234,22 @@ const enableForm = () => {
         actionButtons.forEach(button => {
             button.addEventListener("click", (e) => {
                 e.preventDefault();
-                toast.classList.add("hidden");
+                const accion = button.getAttribute("data-accion");
+                
+                if (accion === "si") {
+                    // Pedir email para suscribirse
+                    const email = prompt("¿Cuál es tu email para recibir ofertas? 📧");
+                    if (email && email.trim()) {
+                        subscribeNewsletter(email.trim())
+                            .then((result) => {
+                                alert(result.message);
+                                toast.classList.add("hidden");
+                            });
+                    }
+                } else {
+                    // Solo cerrar el popup si dice "Ahora no"
+                    toast.classList.add("hidden");
+                }
             });
         });
     }

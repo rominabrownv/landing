@@ -24,7 +24,8 @@ const saveVote = (productID, voterName) => {
     .then(() => ({ success: true, message: "¡Voto guardado correctamente!" }))
     .catch(err => ({ success: false, message: err.message }));
 };
- 
+
+
 export { saveVote };
 
 
