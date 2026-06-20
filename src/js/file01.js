@@ -54,7 +54,6 @@ let renderProducts = (idCategoria = "") => {
                 container.innerHTML = '';
                 
                 // Solo reiniciamos las opciones del formulario la primera vez (cuando no estamos filtrando)
-                // o si prefieres que el formulario cambie según el filtro, déjalo activo.
                 if (selectProduct && idCategoria === "") {
                     selectProduct.innerHTML = `
                         <option value="" disabled selected>Selecciona tu producto favorito</option>
@@ -71,7 +70,7 @@ let renderProducts = (idCategoria = "") => {
                     productsToDisplay = allProducts.slice(0, 6);
                 }
 
-                // 2. Llenar el Select de Votación (Añadimos TODOS los productos disponibles en la lista)
+                // 2. Llenar el Select de Votación 
                 if (selectProduct && idCategoria === "") {
                     allProducts.forEach(product => {
                         let option = document.createElement("option");
@@ -121,7 +120,7 @@ let renderProducts = (idCategoria = "") => {
 const showToast = () => {
     const toast = document.getElementById("toast-interactive");
     if (toast) {
-        toast.classList.add("md:block");
+        toast.classList.remove("hidden");
     }
 };
 const showVideo = () => {
@@ -167,6 +166,45 @@ const enableForm = () => {
 };
 
 (() => {
+    // Funcionalidad del menú hamburguesa
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    }
+
+    // Funcionalidad para cerrar el pop-up
+    const toast = document.getElementById("toast-interactive");
+    if (toast) {
+        // Cerrar con la X
+        const dismissButton = toast.querySelector('[data-dismiss-target="#toast-interactive"]');
+        if (dismissButton) {
+            dismissButton.addEventListener("click", () => {
+                toast.classList.add("hidden");
+            });
+        }
+
+        // Cerrar con los botones de acción
+        const actionButtons = toast.querySelectorAll("[data-accion]");
+        actionButtons.forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                toast.classList.add("hidden");
+            });
+        });
+    }
+
     renderProducts();
     renderCategories();
     enableForm();
